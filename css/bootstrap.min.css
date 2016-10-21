@@ -23,7 +23,7 @@ article .row{
    visibility: hidden;
 }
 .jumbotron{
-	background:#eee url(../images/erweima.png) no-repeat right bottom;
+	background:#eee url(../images/m_binghe.png) no-repeat right bottom;
 	background-size:10rem 10rem;
 }
 @media screen and (max-width:480px){
