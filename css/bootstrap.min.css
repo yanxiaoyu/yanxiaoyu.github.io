@@ -19,6 +19,9 @@ article .row{
 	padding-bottom:20px;
 	line-height:1.8;
 }
+article .row p{
+	text-indent:0;
+}
  .ms-controller{
    visibility: hidden;
 }
