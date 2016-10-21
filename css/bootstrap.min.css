@@ -9,6 +9,16 @@
  article p:last-child{
 	margin-bottom:30px;
  }
+article .ma{
+	float:right;
+	margin:0 0 10px 10px;
+ }
+article .row{
+	padding-left:15px;
+	padding-right:15px;
+	padding-bottom:20px;
+	line-height:1.8;
+}
  .ms-controller{
    visibility: hidden;
 }
