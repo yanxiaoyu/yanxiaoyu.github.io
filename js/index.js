@@ -1,4 +1,11 @@
-
+function getData(){
+	$.get("../data/json_1.json",function(ret){
+		console.log(ret);
+		return ret;
+	});
+}
+var col_1_data = getData();
+console.log(col_1_data);
 var vm = new Vue({
 	el:"#info",
 	data:{
@@ -6,14 +13,8 @@ var vm = new Vue({
 		msg:"我是小鱼"
 	},
 	methods:{
-		getData:function(){
-			$.get("../data/json_1.json",function(ret){
-				console.log(ret);
-				return ret;
-			});
-		}
+		
 	}
 });
 
-var col_1_data = vm.getData();
-console.log(col_1_data);
+
