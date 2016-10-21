@@ -8,3 +8,6 @@ var vm = avalon.define({
 	}
 });
 
+$(function(){
+	vm.getInfo();
+});
