@@ -3,7 +3,9 @@ function getData(){
 	$.get("../data/json_1.json",function(ret){
 		console.log(ret);
 		mydata = ret;
+		console.log(mydata);
 	});
+	console.log(mydata);
 	return mydata;
 }
 var col_1_data = getData();
