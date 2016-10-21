@@ -34,43 +34,35 @@
         </div>
         <div class="clearfix row" ms-controller="info">
             <div class="col-sm-3 col-xs-12">
-                <h2 class="text-danger">JS相关</h2>
+                <h2 class="text-success">各种神器{{@msg}}</h2>
                 <ul class="list-group">
-                    <li class="list-group-item list-group-item-success"><a href="#">Dapibus ac facilisis in</a></li>
-                    <li class="list-group-item list-group-item-info">Cras sit amet nibh libero</li>
-                    <li class="list-group-item list-group-item-warning">Porta ac consectetur ac</li>
-                    <li class="list-group-item list-group-item-danger">Vestibulum at eros</li>
+                    <li class="list-group-item list-group-item-danger" ms-for="item in @list_god">
+                        <a ms-attr="{href:'article/god-' + item.id + '.html'}" target="_blank">{{item.title}}</a>
+                    </li>
                 </ul>
             </div>
             <div class="col-sm-3 col-xs-12">
-                <h2 class="text-success">各种神器</h2>
+                <h2 class="text-danger">JS相关</h2>
                 <ul class="list-group">
-                    <li class="list-group-item list-group-item-danger">
-                    	<a href="article/2.html" target="_blank">Browsersync-浏览器自动刷新神器</a>
+                    <li class="list-group-item list-group-item-danger" ms-for="item in @list_js">
+                        <a ms-attr="{href:'article/js-' + item.id + '.html'}" target="_blank">{{item.title}}</a>
                     </li>
-                    <li class="list-group-item list-group-item-info">Cras sit amet nibh libero</li>
-                    <li class="list-group-item list-group-item-warning">Porta ac consectetur ac</li>
-                    <li class="list-group-item list-group-item-danger" ms-for="item in @list">{{item.title}}</li>
                 </ul>
             </div>
             <div class="col-sm-3 col-xs-12">
                 <h2 class="text-primary">DIV+CSS相关</h2>
                 <ul class="list-group">
-                    <li class="list-group-item list-group-item-success"><a href="#">Dapibus ac facilisis in</a></li>
-                    <li class="list-group-item list-group-item-info">Cras sit amet nibh libero</li>
-                    <li class="list-group-item list-group-item-warning">Porta ac consectetur ac</li>
-                    <li class="list-group-item list-group-item-danger">Vestibulum at eros</li>
+                    <li class="list-group-item list-group-item-danger" ms-for="item in @list_css">
+                        <a ms-attr="{href:'article/css-' + item.id + '.html'}" target="_blank">{{item.title}}</a>
+                    </li>
                 </ul>
             </div>
             <div class="col-sm-3 col-xs-12">
                 <h2 class="text-success">其他笔记</h2>
                 <ul class="list-group">
-                    <li class="list-group-item list-group-item-success">
-                    	<a href="article/1.html" target="_blank">怎样在github上搭建自己的博客</a>
+                    <li class="list-group-item list-group-item-danger" ms-for="item in @list_ot">
+                        <a ms-attr="{href:'article/ot-' + item.id + '.html'}" target="_blank">{{item.title}}</a>
                     </li>
-                    <li class="list-group-item list-group-item-info">Cras sit amet nibh libero</li>
-                    <li class="list-group-item list-group-item-warning">Porta ac consectetur ac</li>
-                    <li class="list-group-item list-group-item-danger">Vestibulum at eros</li>
                 </ul>
             </div>
         </div>
@@ -78,8 +70,8 @@
     <footer class="container bg-success">
     	<h6 class="text-center">Powered by <a href="http://www.bootcss.com/" target="_blank" class="text-danger">Bootstrap</a></h6>
     </footer>
-</body>
-<script src="js/zepto.min.js"></script>
+</body><!-- 
+<script src="js/zepto.min.js"></script> -->
 <script src="js/avalon.modern.min.js"></script>
 <script src="js/index.js"></script>
 </html>

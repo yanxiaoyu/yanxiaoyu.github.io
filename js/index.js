@@ -1,13 +1,19 @@
 var vm = avalon.define({
 	$id:"info",
-	list:[
+	list_js:[
+		],
+	list_css:[
+		],
+	list_god:[
 			{
 				id:"1",
-				title:"这是标题"
-			},
-			{
-				id:"2",
-				title:"这是标题22222"
+				title:"Browsersync-浏览器自动刷新神器"
 			}
-		]
+		],
+	list_ot:[
+			{
+				id:"1",
+				title:"怎样在github上搭建自己的博客"
+			}
+		],
 });
