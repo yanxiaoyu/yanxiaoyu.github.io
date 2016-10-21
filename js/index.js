@@ -4,6 +4,7 @@ var vm = avalon.define({
 	getInfo:function(){
 		$.get("../data/json_1.json",function(ret){
 			vm.list = ret;
+			console.log(vm.list);
 		});
 	}
 });
