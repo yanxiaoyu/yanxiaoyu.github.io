@@ -1,15 +1,18 @@
 var vm = new Vue({
 	el:"index",
-	data:{},
+	data:{
+		col_1:getData();
+	},
 	methods:{
 		getData:function(){
 			$.get("../data/json_1.json",function(ret){
 				console.log(ret);
+				return ret;
 			});
 		}
 	}
 });
 
 $(function(){
-	vm.getData();
+	//vm.getData();
 });
