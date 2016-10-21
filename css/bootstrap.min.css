@@ -9,3 +9,6 @@
  article p:last-child{
 	margin-bottom:30px;
  }
+ .ms-controller{
+   visibility: hidden;
+}
