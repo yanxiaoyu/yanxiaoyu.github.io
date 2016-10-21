@@ -1,8 +1,10 @@
 function getData(){
+	var mydata = [];
 	$.get("../data/json_1.json",function(ret){
 		console.log(ret);
-		return ret;
+		mydata = ret;
 	});
+	return mydata;
 }
 var col_1_data = getData();
 console.log(col_1_data);
