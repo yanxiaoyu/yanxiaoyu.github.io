@@ -1,8 +1,8 @@
 
 var vm = new Vue({
-	el:"#index",
+	el:"#info",
 	data:{
-		col_1:col_1_data,
+		//col_1:col_1_data,
 		msg:"我是小鱼"
 	},
 	methods:{
