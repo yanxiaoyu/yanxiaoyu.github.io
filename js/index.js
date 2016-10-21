@@ -1,7 +1,7 @@
 var vm = new Vue({
 	el:"index",
 	data:{
-		col_1:getData(),
+		col_1:this.getData(),
 	},
 	methods:{
 		getData:function(){
