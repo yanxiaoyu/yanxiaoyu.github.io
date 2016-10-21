@@ -12,3 +12,12 @@
  .ms-controller{
    visibility: hidden;
 }
+.jumbotron{
+	background:#eee url(../images/erweima.png) no-repeat right bottom;
+	background-size:10rem 10rem;
+}
+@media screen and (max-width:480px){
+	.jumbotron .btn-lg{
+		margin:5px auto;
+	}	
+}
