@@ -13,11 +13,13 @@
      xx <div id="xx"></div>
      yy <div id="yy"></div>
      err <div id="err"></div>
+     您的所在地为: <span id="youadd"></span>
 <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
 <script>
 var xx = document.getElementById("xx");
 var yy = document.getElementById("yy");
 var err = document.getElementById("err");
+var youadd = document.getElementById("youadd");
 //判断浏览器是否支持geolocation
 if(navigator.geolocation){
      // getCurrentPosition支持三个参数
@@ -68,9 +70,23 @@ if(navigator.geolocation){
                console.log(position.address.city);
           }
 
-          mapurl = "http://api.map.baidu.com/geocoder/v2/?ak=E4805d16520de693a3fe707cdc962045&callback=renderReverse&location="+position.coords.latitude+","+position.coords.longitude+"&output=json&pois=1";
-          $.get(mapurl,function(ret){
+
+          function showLocation(ret){
                console.log(ret);
+          }
+          mapurl = "http://api.map.baidu.com/geocoder/v2/?ak=DCc3a6d8f4defff6aedb8f616fb0ad48&location="+position.coords.latitude+","+position.coords.longitude+"&output=json&pois=1&callback=showLocation";
+         
+          $.ajax({
+               type:"get",
+               dataType:"jsonp",
+               url:mapurl,
+               jsonp:"callback",
+               jsonpCallback:"showLocation",
+               success:function(ret){
+                    console.log(ret);
+                    var address = ret.result.addressComponent.province +" "+ ret.result.addressComponent.city +" "+ ret.result.addressComponent.district;
+                    youadd.innerHTML = address;
+               }
           });
           
      }
