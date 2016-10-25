@@ -74,7 +74,7 @@ if(navigator.geolocation){
           function showLocation(ret){
                console.log(ret);
           }
-          mapurl = "http://api.map.baidu.com/geocoder/v2/?ak=DCc3a6d8f4defff6aedb8f616fb0ad48&location="+position.coords.latitude+","+position.coords.longitude+"&output=json&pois=1&callback=showLocation";
+          mapurl = "https://api.map.baidu.com/geocoder/v2/?ak=DCc3a6d8f4defff6aedb8f616fb0ad48&location="+position.coords.latitude+","+position.coords.longitude+"&output=json&pois=1&callback=showLocation";
          
           $.ajax({
                type:"get",
