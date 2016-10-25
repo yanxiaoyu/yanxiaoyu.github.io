@@ -10,10 +10,10 @@
 
 </head>
 <body>
-	xx <div id="xx"></div>
-	yy <div id="yy"></div>
-	err <div id="err"></div>
-
+     xx <div id="xx"></div>
+     yy <div id="yy"></div>
+     err <div id="err"></div>
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
 <script>
 var xx = document.getElementById("xx");
 var yy = document.getElementById("yy");
@@ -67,10 +67,16 @@ if(navigator.geolocation){
                console.log(position.address.province);
                console.log(position.address.city);
           }
+
+          mapurl = "http://api.map.baidu.com/geocoder/v2/?ak=E4805d16520de693a3fe707cdc962045&callback=renderReverse&location="+position.coords.latitude+","+position.coords.longitude+"&output=json&pois=1";
+          $.get(mapurl,function(ret){
+               console.log(ret);
+          });
+          
      }
      //失败回调
      function getError(error){
-     	yy.innerHTML = error;
+          yy.innerHTML = error;
           // 执行失败的回调函数，会接受一个error对象作为参数
           // error拥有一个code属性和三个常量属性TIMEOUT、PERMISSION_DENIED、POSITION_UNAVAILABLE
           // 执行失败时，code属性会指向三个常量中的一个，从而指明错误原因
