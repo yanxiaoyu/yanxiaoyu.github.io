@@ -8,6 +8,10 @@ var vm = avalon.define({
 			{
 				id:"1",
 				title:"Browsersync-浏览器自动刷新神器"
+			},
+			{
+				id:"2",
+				title:"Wox-An effective launcher for windows"
 			}
 		],
 	list_ot:[
